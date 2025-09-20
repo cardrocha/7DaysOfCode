@@ -27,7 +27,7 @@ Você pode testar os códigos diretamente no navegador:
 1. Clique com o botão direito em qualquer página;
 2. Selecione **Inspecionar**;
 3. Vá para a aba **Console**;
-4. Cole seu código e veja os resultados.
+4. Veja os resultados do desafio;
 
 ---
 
