@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia01</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+</style>
+</head>
+
+<body>
+  <h2>Dia 1 - Comparação de Variáveis</h2>
+
+  <p>O primeiro dia do desafio propõe trabalhar com comparação de variáveis em JavaScript, destacando as diferenças
+    entre == e ===.
+    A tarefa consiste em analisar valores numéricos e strings, identificar quando possuem o mesmo valor mas tipos
+    diferentes, e reescrever o código de forma que os resultados impressos no console façam sentido e estejam corretos.
+  </p>
+
+  <h2>Desafio dia 01</h2>
+
+  <pre>
+    let numeroUm = 1
+    let stringUm = '1'
+    let numeroTrinta = 30
+    let stringTrinta = '30'
+    let numeroDez = 10
+    let stringDez = '10'
+
+    if (COMPARAR O numeroUm e a stringUm) {
+      console.log('As variáveis numeroUm e stringUm tem o mesmo valor, mas tipos diferentes')
+    } else {
+      console.log('As variáveis numeroUm e stringUm não tem o mesmo valor')
+    }
+
+    if (COMPARAR O numeroTrinta e a stringTrinta) {
+      console.log('As variáveis numeroTrinta e stringTrinta tem o mesmo valor e mesmo tipo')
+    } else {
+      console.log('As variáveis numeroTrinta e stringTrinta não tem o mesmo tipo')
+    }
+
+    if (COMPARAR O numeroDez e a stringDez) {
+      console.log('As variáveis numeroDez e stringDez tem o mesmo valor, mas tipos diferentes')
+    } else {
+      console.log('As variáveis numeroDez e stringDez não tem o mesmo valor')
+    }
+  </pre>
+  <h2>Solução:</h2>
+  <pre>
+    if (numeroUm == stringUm) {
+      console.log('As variáveis numeroUm e stringUm tem o mesmo valor, mas tipos diferentes')
+    } else {
+      console.log('As variáveis numeroUm e stringUm não tem o mesmo valor')
+    }
+
+    if (numeroTrinta === stringTrinta) {
+      console.log('As variáveis numeroTrinta e stringTrinta tem o mesmo valor e mesmo tipo')
+    } else {
+      console.log('As variáveis numeroTrinta e stringTrinta não tem o mesmo tipo')
+    }
+
+    if (numeroDez == stringDez) {
+      console.log('As variáveis numeroDez e stringDez tem o mesmo valor, mas tipos diferentes')
+    } else {
+      console.log('As variáveis numeroDez e stringDez não tem o mesmo valor')
+    }
+  </pre>
+
+  <p>Resultado no console, <strong>clique F12</strong></p>
+
+
+  <a href="../index.html">Volta a página principal</a>
+  <script src="script.js"></script>
+</body>
+
+</html>

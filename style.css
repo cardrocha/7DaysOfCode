@@ -1,0 +1,43 @@
+* {
+    font-family: "SUSE Mono", sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+  header h1 {
+    background-color: #412aa5;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 0;
+  }
+
+  body {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  li a {
+    background-color: #a52a2a;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  li a:hover {
+    background-color: #701d1d;
+    transform: scale(1.1);
+    text-decoration: underline;
+  }
+
+  .links-items {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 16px;
+  }
