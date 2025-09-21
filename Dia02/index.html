@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia02</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h2>Dia 2 – Interatividade com o usuário</h2>
+
+  <p>No segundo dia do desafio <strong>#7DaysOfCode</strong>, o objetivo é criar um programa que interaja com o usuário através do
+    prompt.</p>
+
+  <h3>O programa faz 3 perguntas:</h3>
+
+  <ol>
+    <li>Qual o seu nome?</li>
+
+    <li>Quantos anos você tem?</li>
+
+    <li>Qual linguagem de programação você está estudando?</li>
+  </ol>
+  <p>E, em seguida, exibe a mensagem: <strong>"Olá [nome], você tem [idade] anos e já está aprendendo
+      [linguagem]!"</strong></p>
+
+  <h3>🎯 Exercício Opcional</h3>
+
+  <p>Foi adicionado um complemento onde o sistema pergunta:<br /> <br />
+
+    <strong>"Você gosta de estudar [linguagem]?</strong> <br /><br /> Responda com o número 1 para SIM ou 2 para
+    NÃO."<br />
+
+  <h3>E, de acordo com a resposta, retorna:</h3>
+
+  <ol>
+    <li>"Muito bom! Continue estudando e você terá muito sucesso.</li>
+
+    <li>"Ahh que pena... Já tentou aprender outras linguagens?"</li>
+  </ol>
+
+  <h2>Solução:</h2>
+
+  <pre>
+  // Verifica se as respostas iniciais do usuário estão vazias
+    const nome = prompt("Qual o seu nome?");
+    if (nome === "") {
+      alert("Nome não pode estar vazio!");
+    }
+    const idade = prompt("Quantos anos você tem?");
+    if (idade === "") {
+      alert("Idade não pode estar vazio!");
+    }
+    const linguagem = prompt("Qual linguagem de programação você está estudando?")
+    if (linguagem === "") {
+      alert("Linguagem não pode estar vazio!");
+    }
+
+    // Só continua se todas as perguntas iniciais foram respondidas
+    if (nome === "" || idade === "" || linguagem === "") {
+      console.log("Você não respondeu corretamente as perguntas de antes!");
+    } else {
+      const mensagem = `Olá ${nome}, você tem ${idade} anos e já está aprendendo ${linguagem}!`;
+      console.log(mensagem);
+
+  //Condição extra: Verifica se o usuário gosta da linguagem informada
+    const pergunta = prompt(`Você gosta de estudar ${linguagem}? (Sim ou Não)`);
+
+    if (pergunta && pergunta.toUpperCase() === "SIM") {
+        console.log("Muito bom! Continue estudando e você terá muito sucesso");
+      } else if (pergunta && pergunta.toUpperCase() === "NÃO") {
+        console.log("Ahh que pena... Já tentou aprender outras linguagens?");
+      } else {
+        console.log("Resposta inválida. Por favor, responda com 'Sim' ou 'Não'.");
+      }
+    }
+  </pre>
+
+  <p>🚀 Tecnologias utilizadas: <strong>JavaScript</strong>, <strong>console.log( )</strong>, <strong>prompt( )</strong>, <strong>alert( )</strong>, <strong>toUpperCase( )</strong>, <strong>Template literals (` `)</strong>, <strong>Operadores lógicos</strong>, <strong>Condicionais</strong> para
+    interação com o usuário.</p>
+
+  <p>Resultado no console, <strong>clique F12</strong></p>
+
+  <a href="../index.html">Volta a página principal</a>
+  <script src="script.js"></script>
+</body>
+
+</html>
