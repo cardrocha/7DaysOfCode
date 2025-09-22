@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia03</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h2>Dia 3 - Estruturas de repetição</h2>
+  <p>Objetivo foi criar uma espécie de "mini-jogo" em JavaScript, onde as escolhas do usuário definem o destino da
+    história.</p>
+
+  <p>Para isso, trabalhei com <strong>estruturas de controle de fluxo</strong> como:</p>
+  <ul>
+    <li><strong>if / else if / else</strong> para ramificar as escolhas.</li>
+    <li><strong>while</strong> para permitir que o usuário adicionasse quantas tecnologias quisesse aprender.</li>
+    <li><strong>prompt, alert e console.log</strong> para interação com o usuário.</li>
+    <li><strong>Operador Ternário</strong> para controle de condicionais com duas escolhas, tornando o código mais limpo e organizado</li>
+  </ul>
+
+  <p>No fluxo do while eu mudei a lógica, aqui o usuário poderia adicionar quantas ele quiser até decidir para, eu mudei
+    para adicionar apenas 5.</p>
+
+  <h2>O fluxo ficou assim:</h2>
+  <ol>
+    <li>Escolher entre seguir no <strong>Front-End</strong> ou no <strong>Back-End</strong>.</li>
+    <li>Decidir entre <strong>React</strong> ou <strong>Vue (Front)</strong> e <strong>C#</strong> ou <strong>Java (Back)</strong>.</li>
+    <li>Optar por especialização ou se tornar Fullstack.</li>
+    <li>Inserir até 5 tecnologias para aprender.</li>
+  </ol>
+
+  <h2>Solução:</h2>
+
+  <pre>
+    let escolhaValida = false;
+
+    let skills = 0;
+
+    let arraySkills = [];
+
+    const escolha = prompt("Qual área deseja seguir? 1 - Front-end || 2 - Back-end");
+
+    switch (escolha) {
+      case "1":
+        alert("Front-end, ótima escolha! Trabalhar com interfaces e design.");
+        const tecnologia = prompt("Qual tecnologia do front-end deseja aprender? 1 - React || 2 - Vue.js");
+        if (tecnologia === "1") {
+          alert("React é a biblioteca mais usada na construção de interfaces de usuário.");
+          escolhaValida = true;
+        } else if (tecnologia === "2") {
+          alert("Vue.js é um framework 'novo' bastante utilizado na construção de interfaces de usuário.");
+          escolhaValida = true;
+        } else {
+          console.log("Opção inválida. Escolha 1 ou 2.");
+        }
+        break;
+      case "2":
+        alert("Back-end, ótima escolha! Trabalhar com banco de dados e lógica do servidor.");
+        const tecnologia2 = prompt("Qual tecnologia do back-end deseja aprender? 1 - C# || 2 - Java");
+        if (tecnologia2 === "1") {
+          alert("C# é uma linguagem de programação de propósito geral, orientada a objetos.");
+          escolhaValida = true;
+        } else if (tecnologia2 === "2") {
+          alert("Java é uma linguagem de programação popular, orientada a objetos e multiplataforma.");
+          escolhaValida = true;
+        } else {
+          console.log("Opção inválida. Escolha 1 ou 2.");
+        }
+        break;
+      default:
+        alert("Você não escolheu uma opção válida!");
+    }
+
+    if (escolhaValida) {
+      const especializacao = prompt(
+        `Você deseja seguir se especializando na área escolhida ou seguir se desenvolvendo para se tornar Fullstack? 
+        (1 - Seguir na área ${escolha === "1" ? "Front-end" : "Back-end"} || 2 - Se tornar Fullstack)`
+      );
+
+      if (especializacao === "1") {
+        console.log(
+          `Excelente! Continuar se especializando em ${escolha === "1" ? "Front-end" : "Back-end"} vai te tornar uma referência na área.`
+        );
+      } else if (especializacao === "2") {
+        console.log(
+          "Incrível! Se tornar Fullstack vai te dar uma visão completa do desenvolvimento e abrir muitas oportunidades."
+        );
+      } else {
+        console.log("Opção inválida. Escolha 1 ou 2.");
+      }
+    }
+
+    if(escolhaValida) {
+      while (skills < 5) {
+        const skills2 = prompt(`${skills >= 1 ? "Você já escolheu " + (skills) : "Escolha 5"} tecnologia(s) que gostaria de aprender`)
+        console.log(`Você escolheu: ${skills2}`);
+        arraySkills.push(skills2) 
+        skills++;
+      }
+      alert(`Parabéns! Você escolheu suas 5 tecnologias. (${arraySkills})`);
+    }
+  </pre>
+
+  <p>Resultado no console, <strong>clique F12</strong></p>
+
+
+  <a href="../index.html">Volta a página principal</a>
+  <script src="script.js"></script>
+</body>
+
+</html>
