@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia04</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h2>Dia 4 - Mais loops e randomização</h2>
+  <p>Objetivo aqui é criar um jogo de advinha em JavaScript, onde o usuário escolhe um número e vê se acertou.</p>
+  <p>Para isso, novamente trabalhei com <strong>estruturas de controle de fluxo</strong> foram elas:</p>
+  <ul>
+    <li><strong>if / else if / else</strong> para ramificar as escolhas.</li>
+    <li><strong>do while</strong> para permitir que o usuário escolhesse números entre 0 a 10.</li>
+    <li><strong>prompt, alert e console.log</strong> para interação com o usuário.</li>
+    <li><strong>Operador Ternário</strong> para controle mensagens que seriam exibidas ao usuário.</li>
+  </ul>
+
+  <h2>O fluxo ficou assim:</h2>
+  <ol>
+    <li>Escolher um número entre o e 10, usando <strong>Math.random()</strong></li>
+    <li>Caso o número escolhido não era o certo, a variável <strong>numeroDeTentativas</strong> decrementaria em - 1
+    </li>
+    <li>Informar ao usuário quantas tentativas restam.</li>
+    <li>Caso acertasse a condição,o loop se encerraria</li>
+  </ol>
+
+  <h2>Solução:</h2>
+
+  <pre>
+    const numero = Math.floor(Math.random() * 11);
+
+    let numeroDeTentativas = 2;
+
+    let acertou = false;
+
+    do {
+      console.log(numero)
+      const tentativa = prompt("Escolha um número, veja se acertou!")
+      if (numero == tentativa) {
+        alert(`Seu número escolhido foi ${tentativa}. Você acertou o número, parabéns!`)
+        acertou = true
+      } else {
+        alert(`Seu número escolhido foi ${tentativa}. não foi dessa vez!`)
+        alert(`${numeroDeTentativas === 0 ? `Acabou suas tentativas, game over!` : `Você tem mais ${numeroDeTentativas} tentativas.`}`)
+      }
+      numeroDeTentativas--;
+    }
+
+    while (numeroDeTentativas >= 0 && !acertou);
+
+    if (acertou) {
+      alert("Jogue novamente! :)");
+    } else {
+      alert(`Não foi dessa vez, tente novamente! O número era ${numero}.`);
+    }
+  </pre>
+
+  <p>Resultado no console, <strong>clique F12</strong></p>
+
+
+  <a href="../index.html">Volta a página principal</a>
+  <script src="script.js"></script>
+</body>
+
+</html>
