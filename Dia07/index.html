@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dia07</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Dia 7 – Calculadora com javascript</h1>
+  <p>O objetivo neste desafio é criar uma calculadora, onde podemos escolher entre as operações de adição, divisão,
+    multiplicação e divisão. Usando funções do javascript, entre outros métodos.</p>
+
+  <p>Para isso, trabalhei com <strong>Switch Case & function</strong>.</p>
+
+  <ul>
+    <li><strong>Switch case</strong> para decisões de escolha;</li>
+    <li><strong>Prompt</strong> para perguntas e interação com o usuário;</li>
+    <li><strong>Console.log</strong> para exibição dos resultados das operações.</li>
+  </ul>
+
+  <h2>O fluxo ficou assim:</h2>
+  <ol>
+    <li>O usuário escolhe entre as operações;</li>
+    <li>Ao escolhe uma operação o usuário deve escolher os números que desejam fazer a operação;</li>
+    <li>No final é exibido no console o resultado da operação</li>
+  </ol>
+
+  <h2>Solução:</h2>
+
+  <pre>
+    const operacao = prompt("Qual operação deseja fazer? (1 - adição, 2 - subtração, 3 - multiplicação, 4 - divisão)")
+
+    function adicao(num1, num2) {
+      return num1 + num2;
+    }
+
+    function subtracao(num1, num2) {
+      return num1 - num2;
+    }
+
+    function multiplicacao(num1, num2) {
+      return num1 * num2;
+    }
+
+    function divisao(num1, num2) {
+      return num1 / num2;
+    }
+
+
+    let num1, num2, resultado;
+
+    switch (operacao) {
+      case "1":
+        num1 = prompt("Digite o primeiro número.")
+        num2 = prompt("Digite o segundo número.")
+        resultado = adicao(parseInt(num1), parseInt(num2))
+        console.log(resultado)
+        break;
+      case "2":
+        num1 = prompt("Digite o primeiro número.")
+        num2 = prompt("Digite o segundo número.")
+        resultado = subtracao(parseInt(num1), parseInt(num2))
+        console.log(resultado)
+        break;
+      case "3":
+        num1 = prompt("Digite o primeiro número.")
+        num2 = prompt("Digite o segundo número.")
+        resultado = multiplicacao(parseInt(num1), parseInt(num2))
+        console.log(resultado)
+        break;
+      case "4":
+        num1 = prompt("Digite o primeiro número.")
+        num2 = prompt("Digite o segundo número.")
+        resultado = divisao(parseInt(num1), parseInt(num2))
+        console.log(resultado)
+        break;
+      default:
+        console.log("Opção inválida!")
+    }
+  </pre>
+
+  <p>Resultado no console, <strong>clique F12</strong></p>
+
+
+  <a href="../index.html">Volta a página principal</a>
+  <script src="script.js"></script>
+</body>
+
+</html>
